@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Anel Solitário Prata 925",
+    "descricao": "Anel solitário em prata 925 com zircônia central.",
+    "preco": 199.9,
+    "imagem": "assets/anelSolitario.jpg",
+    "categoria": "anel",
+    "codigo": "ANL-001"
+  },
+  {
+    "id": 2,
+    "nome": "Brinco Gota Ouro 18k (banho)",
+    "descricao": "Brinco em banho de ouro com acabamento polido.",
+    "preco": 149.9,
+    "imagem": "assets/brincoGota.jpg",
+    "categoria": "brinco",
+    "codigo": "BRI-010"
+  },
+  {
+    "id": 3,
+    "nome": "Colar Minimalista",
+    "descricao": "Colar delicado para uso diário, corrente veneziana.",
+    "preco": 129.9,
+    "imagem": "assets/colarMinimalista.jpg",
+    "categoria": "colar",
+    "codigo": "COL-007"
+  },
+  {
+    "id": 4,
+    "nome": "Pulseira Elo Português",
+    "descricao": "Pulseira com elo português, acabamento premium.",
+    "preco": 249.9,
+    "imagem": "assets/pulseiraElo.jpg",
+    "categoria": "pulseira",
+    "codigo": "PUL-004"
+  }
+]

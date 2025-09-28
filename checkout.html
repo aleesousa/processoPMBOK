@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checkout — Loja Eleganza</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Loja <span>Eleganza</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="catalogo.html">Catálogo</a>
+        <a href="cart.html">Carrinho</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Checkout</h1>
+    <form id="checkout-form" class="checkout-form" novalidate>
+      <fieldset>
+        <legend>Dados do Cliente</legend>
+        <label>Nome completo <input name="nome" type="text" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Telefone <input name="telefone" type="tel" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+        <label>CEP <input name="cep" type="text" required></label>
+        <label>Endereço <input name="endereco" type="text" required></label>
+        <label>Cidade <input name="cidade" type="text" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pagamento</legend>
+        <label><input name="pagamento" type="radio" value="pix" checked> PIX</label>
+        <label><input name="pagamento" type="radio" value="cartao"> Cartão</label>
+      </fieldset>
+
+      <div class="checkout-summary" id="checkout-summary" aria-live="polite"></div>
+
+      <button class="btn" type="submit">Confirmar Pedido</button>
+    </form>
+
+    <div id="mensagem" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Loja Eleganza</p>
+    </div>
+  </footer>
+</body>
+</html>

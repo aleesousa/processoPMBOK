@@ -1,2 +1,0 @@
-# processoPMBOK
-Trabalho de Gerenciamento 
