@@ -13,3 +13,7 @@ Arquivos gerados na pasta /mnt/data/joias_site/:
 - assets/ (imagens placeholders, você deve substituir)
 
 O site ainda está em andamento.
+
+link para a visita do site:
+
+https://aleesousa.github.io/processoPMBOK/
