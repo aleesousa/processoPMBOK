@@ -1,6 +1,6 @@
 README — Implementação do site profissionalizado
 
-Arquivos gerados na pasta /mnt/data/joias_site/:
+Arquivos gerados na pasta /processoPMBOK/:
 
 - index.html
 - catalogo.html
