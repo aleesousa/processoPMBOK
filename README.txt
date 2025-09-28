@@ -12,13 +12,4 @@ Arquivos gerados na pasta /mnt/data/joias_site/:
 - data/products.json
 - assets/ (imagens placeholders, você deve substituir)
 
-O site é estático e usa localStorage para o carrinho. Para produção:
-- Substitua as imagens da pasta assets por fotos reais.
-- Integre um backend ou gateway de pagamento (ex: Stripe, PagSeguro).
-- Adicione validações e segurança no servidor para pedidos.
-- Use HTTPS e headers de segurança.
-
-Se quiser, eu posso:
-- Gerar imagens placeholders reais (sem marca d'água).
-- Empacotar tudo num ZIP.
-- Adaptar para React/Vue ou CMS.
+O site ainda está em andamento.
