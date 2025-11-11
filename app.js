@@ -1,5 +1,5 @@
 // === app.js — versão unificada e otimizada ===
-// Gerencia catálogo, produto, carrinho e checkout com base no localStorage (carrinho_v2)
+// Gerencia catálogo, produto, carrinho e checkout com base no localStorage (carrinho_v3)
 
 async function carregarProdutos() {
   const res = await fetch("data/products.json");
