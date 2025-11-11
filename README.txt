@@ -16,4 +16,3 @@ O site ainda está em andamento.
 
 link para a visita do site:
 
-https://aleesousa.github.io/processoPMBOK/
