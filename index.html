@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,16 +9,30 @@
   <script defer src="app.js"></script>
   <meta name="description" content="Loja Eleganza — joias e acessórios com acabamento premium. Compre online com segurança.">
 </head>
+
 <body>
+  <!-- === MENU DE NAVEGAÇÃO === -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Loja <span>Eleganza</span></a>
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="catalogo.html">Catálogo</a>
-        <a href="cart.html" id="cart-link">Carrinho (<span id="cart-qty">0</span>)</a>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Eleganza</a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li class="cart-link">
+            <a href="cart.html">
+              Carrinho <span id="cart-qty" class="cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
       </nav>
+
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
     </div>
   </header>
+  <!-- === /MENU DE NAVEGAÇÃO === -->
+
 
   <main class="container">
     <section class="hero">
@@ -26,7 +41,7 @@
         <p>Peças exclusivas em prata, ouro e pedras naturais — design que conta histórias.</p>
         <a class="btn" href="catalogo.html">Ver Catálogo</a>
       </div>
-      <img class="hero-img" src="assets/hero-placeholder.jpg" alt="Joias em destaque (imagem de exemplo)">
+      <img class="hero-img" src="assets/brincoGota.jpg" alt="Joia em destaque">
     </section>
 
     <section class="destaques" aria-labelledby="destaques-title">
@@ -35,11 +50,37 @@
     </section>
   </main>
 
+  <!-- === RODAPÉ === -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Loja Eleganza — Todos os direitos reservados</p>
-      <small>Pagamento seguro — Frete e políticas disponíveis no checkout</small>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Loja Eleganza</h3>
+        <p>Joias únicas que brilham como você. Cada peça é feita com amor, elegância e propósito.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links rápidos</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p>Distrito Federal</p>
+        <p>(61) 99999-9999</p>
+        <p><a href="mailto:contato@lojaeleganza.com">contato@joiaseleganza.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Joias da Ale — Todos os direitos reservados.</p>
     </div>
   </footer>
+  <!-- === /RODAPÉ === -->
 </body>
+
 </html>

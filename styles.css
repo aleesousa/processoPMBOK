@@ -40,10 +40,63 @@ body {
 .brand span {
   font-weight: 400;
 }
+/* --- Menu de navegação aprimorado --- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
 .main-nav a {
   color: #fff;
-  margin-left: 18px;
   text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Efeito de sublinhado dourado */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #f5d76e;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: #f5d76e;
+}
+
+/* Ícone do carrinho */
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cart-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsivo: menu centralizado no mobile */
+@media (max-width: 800px) {
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
 }
 .hero {
   display: grid;
@@ -193,5 +246,393 @@ body {
   .header-inner {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+/* === CHECKOUT PAGE === */
+.checkout-page {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.checkout-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.checkout-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.checkout-section fieldset {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.checkout-section legend {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.checkout-section label {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.checkout-section input[type="text"],
+.checkout-section input[type="email"],
+.checkout-section input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.checkout-section input:focus {
+  border-color: #f5d76e;
+  box-shadow: 0 0 0 3px rgba(245, 215, 110, 0.25);
+  outline: none;
+}
+
+/* pagamento */
+.payment-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* resumo do pedido */
+.checkout-summary {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.checkout-summary h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+#checkout-summary-content p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* botão confirmar */
+.btn-confirm {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #000, #333);
+  border: none;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-confirm:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #333, #000);
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .checkout-summary {
+    margin-top: 20px;
+  }
+}
+
+/* === Checkout — mensagens === */
+#mensagem {
+  margin-top: 20px;
+  text-align: center;
+  min-height: 40px;
+}
+
+/* mensagem de carregamento */
+.msg-loading {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff8e1;
+  color: #b48c00;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* sucesso */
+.msg-sucesso {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: #e8ffe8;
+  border: 1px solid #c7efc7;
+  border-radius: 10px;
+  color: #1a621a;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease;
+}
+
+/* animação do checkmark */
+.checkmark {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  display: inline-block;
+}
+
+.checkmark-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  border: 3px solid #1a621a;
+  animation: scaleIn 0.4s ease forwards;
+}
+
+.checkmark-stem {
+  width: 3px;
+  height: 18px;
+  background-color: #1a621a;
+  position: absolute;
+  left: 23px;
+  top: 13px;
+  transform: rotate(45deg) scaleY(0);
+  animation: stemGrow 0.3s 0.4s ease forwa;
+}
+
+/* === Itens do resumo do checkout === */
+.checkout-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.checkout-item strong {
+  font-weight: 600;
+}
+
+.checkout-total {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* === MENU DE NAVEGAÇÃO === */
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #c99b3b;
+}
+
+.cart-badge {
+  background-color: #c99b3b;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 3px 7px;
+  margin-left: 4px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+/* === /MENU DE NAVEGAÇÃO === */
+
+/* === RODAPÉ MODERNO === */
+.site-footer {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding: 40px 20px 10px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-about h3 {
+  margin-top: 0;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.footer-about p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #000;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c99b3b;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+}
+
+.footer-contact a {
+  color: #c99b3b;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* linha inferior */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+  padding-top: 10px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* responsivo */
+@media (max-width: 700px) {
+  .footer-container {
+    text-align: center;
   }
 }
